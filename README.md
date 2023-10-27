@@ -1,24 +1,61 @@
-# Project 2 oAuth Template
+# ShowBuddy
 
-Use this repo as the base for your project 2.
+ShowBuddy is an app for people who want to go to a concert, show or gig, but have nobody to go with. Maybe you just moved to a new city? Maybe none of your friends like your 'trash' taste in music. Well, ShowBuddy matches you with others who also want to go to the same show. 
 
-## Getting Started
 
-* clone this repo (no forking needed) and cd into the new directory
-* run `rm -rf .git` to remove the git history
-* run `git init` to create a new git history
-* run `git add .` and `git commit -m "init commit"` to create the first commit of the repo 
-* create a new repo on github and follow the instructions to push an existing repository from the command line
-* run `npm i` to install the required packages
-* touch a `.env` file and add the following to it:
+## API 
 
-```shell
-DATABASE_URL= < copy mongo uri from atlas / previous project >
-GOOGLE_CLIENT_ID= < copy from google cloud devs / previous project >
-GOOGLE_SECRET=< copy from google cloud devs / previous project >
-GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
-SECRET="can be any string"
-```
-* run `nodemon` to test your app!
+I will be using the Ticket Master API 
 
-Use this readme as your project pitch! 
+
+## ERD
+
+![ERD](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698361461/ERD_ctrmor.png)
+
+
+## Restful Routing Chart
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+
+
+## Wireframes
+
+
+![Home Screen](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698358073/1_igxoqn.png)
+
+![Find shows in your city](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698358073/2_viphrj.png)
+
+![Profile](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698358073/3_spmscn.png)
+
+![Find buddies to go with / advertise you need someone to go with](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698358073/4_stzten.png)
+
+## User Stories
+
+- As a user, I want to be able to see what shows are available in my city
+- As a user, I want to be able to save a show to my profile that I want to go to 
+- As a user, I want to be able to see what shows people are going to in my city
+- As a user, I want to be able to partner with someone to go to a show
+- As a user, I want to be able to decide to not go to a show and remove it from my profile 
+
+
+
+### MVP Checklist
+
+- [ ] Render a Homepage
+- [ ] Render a Profile page
+- [ ] Render a buddies page
+- [ ] Search functionality to find shows 
+- [ ] Ability to add shows to profile 
+- [ ] Ability to remove shows from profile 
+- [ ] Ability to match with another user and it renders in your profile
+- [ ] Authorization to add / delete a show or connect with a buddy only when logged in
+- [ ] Make sure it is fully responsive 
+
+### Stretch Goals
+
+- [ ] Search for people in your area and see what shows they are going to
+- [ ] Customize your Profile section
+- [ ] When loading the homepage initialy it asks to view your location, and when confirmed it will automatically load shows near you
+- [ ] load creative from the various artists, instead of just listing the shows as text
+- [ ] Genre picking instead of just location
+
