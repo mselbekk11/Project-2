@@ -15,7 +15,12 @@ I will be using the Ticket Master API
 
 ## Restful Routing Chart
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+| Verb   | URL Pattern | Action (CRUD) | Description                          |
+| ------ | ----------- | ------------- | ------------------------------------ |
+| GET    | /shows      | Index (Read)  | List all locations                   |
+| POST   | /shows/:id  | Create        | Add a show to your profile           |
+| PUT    | /shows/:id  | Update        | Updates if a show has a buddy or not |
+| DELETE | /shows/:id  | Delete        | Delete a show from your profile      |
 
 
 ## Wireframes
