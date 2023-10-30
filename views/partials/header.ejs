@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= title %></title>
-</head>
-<body>
-  <nav>
-    <% if (user) { %>
-      <a href="/logout">LOG OUT</a>
-    <% } else { %>
-      <a href="/auth/google">LOG IN</a>
-    <% } %>
-  </nav>
-  <main>
-    <h1><%= title %></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/"><h2 class="nav-brand">Show Buddies</h2></a>
+      <ul class="nav-links">
+        <% if (user) { %>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">PROFILE</a>
+        </li>
+        <li class="nav-item">
+          <a href="/buddies" class="nav-link">BUDDIES</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout">
+            <button type="button" href="/logout" class="login-with-google-btn">
+              Log out with Google
+            </button></a
+          >
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+          <a href="/auth/google">
+            <button type="button" class="login-with-google-btn">
+              Log in with Google
+            </button></a
+          >
+        </li>
+          <% } %>
+        </li>
+      </ul>
+    </nav>
+    <main>
+    </main>
+  </body>
+</html>

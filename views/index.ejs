@@ -1,15 +1,41 @@
 <%- include('./partials/header') %>
 
-<h2>Home Page</h2>
+<div class="container">
+  <h2>Find a Show</h2>
+  <form action="/" method="GET" class="search">
+    <input type="text" name="releaseYear" class="artist" />
+    <button type="submit">Search</button>
+  </form>
 
-<% if (!user) { %>
-<p>please login to continue</p>
-<% } else { %>
-<p>Welcome, <%= user.name %> <%= user.email %></p>
-<% if (user.avatar) { %>
-<img
-  src="<%= user.avatar %>"
-  referrerpolicy="no-referrer"
-  alt="<%= user.name %>'s avatar"
-/>
-<% } %> <% } %> <%- include('./partials/footer') %>
+  <div class="result-container">
+    <% events.forEach(function(e) { %>
+
+    <div><img width="100px" src="<%= e.images[0].url %>" /></div>
+    <div><%= e.name %></div>
+
+    <!-- Close the forEach using EJS here -->
+    <% }); %>
+  </div>
+  <!-- <a href="/cats/fact">Get a cat fact</a> -->
+  <!-- <a href="/">Get show results</a> -->
+</div>
+
+<!-- RECIPE FINDER -->
+
+<!-- <div class="meal-search-box">
+  <input
+    type="text"
+    class="search-control"
+    placeholder="Enter an ingredient"
+    id="search-input"
+  />
+  <button type="submit" class="search-btn btn" id="search-btn">SEARCH</button>
+</div> -->
+
+<!-- <div class="meal-result">
+  <h2 class="title">Your Search Results:</h2>
+  <div id="meal">
+  </div>
+</div> -->
+
+<%- include('./partials/footer') %>
