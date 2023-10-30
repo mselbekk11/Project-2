@@ -1,8 +1,16 @@
 module.exports = {
   index,
+  create,
 }
 
 function index(req, res) {
+  res.render('index', {
+    title: '',
+    events: [],
+  })
+}
+
+function create(req, res) {
   fetch(
     `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=7y0ehPimp6X6gnemHISSG0QiqAM9FZOz`
   )

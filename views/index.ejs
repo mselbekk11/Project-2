@@ -2,11 +2,12 @@
 
 <div class="container">
   <h2>Find a Show</h2>
-  <form action="/" method="GET" class="search">
-    <input type="text" name="releaseYear" class="artist" />
+  <form action="/shows" method="GET" class="search">
+    <input type="text" class="artist" />
     <button type="submit">Search</button>
   </form>
 
+  <% if (events.length) { %>
   <div class="result-container">
     <% events.forEach(function(e) { %>
 
@@ -16,6 +17,9 @@
     <!-- Close the forEach using EJS here -->
     <% }); %>
   </div>
+  <% } else { %>
+  <h5>No Destinations yet Yet</h5>
+  <% } %>
   <!-- <a href="/cats/fact">Get a cat fact</a> -->
   <!-- <a href="/">Get show results</a> -->
 </div>

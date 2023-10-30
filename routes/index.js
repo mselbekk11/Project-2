@@ -4,6 +4,7 @@ const passport = require('passport')
 const indexRouter = require('../controllers/index.js')
 
 router.get('/', indexRouter.index)
+router.get('/shows', indexRouter.create)
 
 // Google OAuth login route
 router.get(
