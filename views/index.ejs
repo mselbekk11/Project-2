@@ -3,43 +3,26 @@
 <div class="container">
   <h2>Find a Show</h2>
   <form action="/shows" method="GET" class="search">
-    <input type="text" class="artist" />
+    <input type="text" class="artist" name="showSearch" />
     <button type="submit">Search</button>
   </form>
 
-  <% if (events.length) { %>
   <div class="result-container">
-    <% events.forEach(function(e) { %>
+    <% if (events.length) { %> <% events.forEach(function(e) { %>
 
-    <div><img width="100px" src="<%= e.images[0].url %>" /></div>
-    <div><%= e.name %></div>
+    <div class="show">
+      <div class="image-container">
+        <img class="show-image" src="<%= e.images[0].url %>" />
+      </div>
+      <div><%= e.name %></div>
+      <div><%= e.dates.start.localDate %></div>
+      <div><%= e._embedded.venues[0].name %></div>
+      <button>Save</button>
+    </div>
 
     <!-- Close the forEach using EJS here -->
-    <% }); %>
+    <% }); %> <% } else { %> <% } %>
   </div>
-  <% } else { %>
-  <h5>No Destinations yet Yet</h5>
-  <% } %>
-  <!-- <a href="/cats/fact">Get a cat fact</a> -->
-  <!-- <a href="/">Get show results</a> -->
 </div>
-
-<!-- RECIPE FINDER -->
-
-<!-- <div class="meal-search-box">
-  <input
-    type="text"
-    class="search-control"
-    placeholder="Enter an ingredient"
-    id="search-input"
-  />
-  <button type="submit" class="search-btn btn" id="search-btn">SEARCH</button>
-</div> -->
-
-<!-- <div class="meal-result">
-  <h2 class="title">Your Search Results:</h2>
-  <div id="meal">
-  </div>
-</div> -->
 
 <%- include('./partials/footer') %>

@@ -1,5 +1,14 @@
 <%- include('../partials/header') %>
 <div class="container">
-  <h2>Profile</h2>
+  <% if (user.avatar) { %>
+  <img
+    src="<%= user.avatar %>"
+    alt="<%= user.name %>'s avatar"
+    referrerpolicy="no-referrer"
+  />
+  <% } %>
+  <p><%= user.name %></p>
+  <p><%= user.email %></p>
+  <h2>Going to these shows:</h2>
 </div>
 <%- include('../partials/footer') %>
