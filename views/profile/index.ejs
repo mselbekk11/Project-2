@@ -18,9 +18,9 @@
         <img name="showImage" class="show-image" src="<%= s.showImage %>" />
       </div>
       <div name="showName"><%= s.showName %></div>
-      <div name="showDate"><%= s.showDate %></div>
+      <div name="showDate"><%= s.showDate.toLocaleDateString() %></div>
       <div name="showVenue"><%= s.showVenue %></div>
-      <button type="submit">Save</button>
+      <button class="delete" type="submit">Delete</button>
     </div>
     <% }) %>
   </div>

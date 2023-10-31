@@ -111,10 +111,11 @@ input:focus, textarea:focus, select:focus{
   /* align-items: flex-start; */
   justify-content: space-between;
   background-color: #fff;
-  color: #000;
+  color: #4e4e4e;
   margin-bottom: 20px;
   align-items: center;
   padding: 10px 20px;
+  font-size: 0.9em;
 }
 
 .image-container {
@@ -136,6 +137,10 @@ input:focus, textarea:focus, select:focus{
   border: none;
   color: #fff;
   padding: 10px 30px;
+}
+
+button.delete {
+  background-color: red;
 }
 
 
