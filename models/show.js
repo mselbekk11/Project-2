@@ -3,7 +3,16 @@ const Schema = mongoose.Schema
 
 const showSchema = new Schema(
   {
-    showSearch: {
+    showImage: {
+      type: String,
+    },
+    showName: {
+      type: String,
+    },
+    showDate: {
+      type: Date,
+    },
+    showVenue: {
       type: String,
     },
   },

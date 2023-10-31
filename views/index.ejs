@@ -12,12 +12,26 @@
 
     <div class="show">
       <div class="image-container">
-        <img class="show-image" src="<%= e.images[0].url %>" />
+        <img name="showImage" class="show-image" src="<%= e.images[0].url %>" />
       </div>
-      <div><%= e.name %></div>
-      <div><%= e.dates.start.localDate %></div>
-      <div><%= e._embedded.venues[0].name %></div>
-      <button>Save</button>
+      <div name="showName"><%= e.name %></div>
+      <div name="showDate"><%= e.dates.start.localDate %></div>
+      <div name="showVenue"><%= e._embedded.venues[0].name %></div>
+      <form action="/profile/shows" method="POST">
+        <input type="hidden" name="showImage" value="<%= e.images[0].url %>" />
+        <input type="hidden" name="showName" value="<%= e.name %>" />
+        <input
+          type="hidden"
+          name="showDate"
+          value="<%= e.dates.start.localDate %>"
+        />
+        <input
+          type="hidden"
+          name="showVenue"
+          value="<%= e._embedded.venues[0].name %>"
+        />
+        <button type="submit">Save</button>
+      </form>
     </div>
 
     <!-- Close the forEach using EJS here -->

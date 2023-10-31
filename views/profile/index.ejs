@@ -10,5 +10,20 @@
   <p><%= user.name %></p>
   <p><%= user.email %></p>
   <h2>Going to these shows:</h2>
+
+  <div class="result-container">
+    <% shows.forEach(function(s) { %>
+    <div class="show">
+      <div class="image-container">
+        <img name="showImage" class="show-image" src="<%= s.showImage %>" />
+      </div>
+      <div name="showName"><%= s.showName %></div>
+      <div name="showDate"><%= s.showDate %></div>
+      <div name="showVenue"><%= s.showVenue %></div>
+      <button type="submit">Save</button>
+    </div>
+    <% }) %>
+  </div>
 </div>
+
 <%- include('../partials/footer') %>
