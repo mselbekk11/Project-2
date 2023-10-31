@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
+
 <div class="container">
-  <% if (user.avatar) { %>
+  <% if (user) { %> <% if (user.avatar) { %>
   <img
     src="<%= user.avatar %>"
     alt="<%= user.name %>'s avatar"
@@ -20,10 +21,16 @@
       <div name="showName"><%= s.showName %></div>
       <div name="showDate"><%= s.showDate.toLocaleDateString() %></div>
       <div name="showVenue"><%= s.showVenue %></div>
-      <button class="delete" type="submit">Delete</button>
+      <form action="profile/shows/<%= s._id %>?_method=DELETE" method="POST">
+        <button class="delete" type="submit">Delete</button>
+      </form>
     </div>
     <% }) %>
   </div>
+
+  <% } else { %>
+  <h2>Please login</h2>
+  <% } %>
 </div>
 
 <%- include('../partials/footer') %>
