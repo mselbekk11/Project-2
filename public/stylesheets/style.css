@@ -15,11 +15,11 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #181818;
   color: #fff;
-  background-color: #181818;
+  /* background-color: #181818;
   opacity: 1;
   background-image:  radial-gradient(#525252 0.65px, transparent 0.65px), radial-gradient(#525252 0.65px, #181818 0.65px);
   background-size: 26px 26px;
-  background-position: 0 0,13px 13px;
+  background-position: 0 0,13px 13px; */
 }
 
 
@@ -74,7 +74,8 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  padding-top: 90px;
+  /* background-color: #000; */
 }
 
 .container-one h2 {
@@ -139,6 +140,7 @@ input:focus, textarea:focus, select:focus{
 
 .result-container {
   width: 1000px;
+  padding-bottom: 40px;
 }
 
 .show{

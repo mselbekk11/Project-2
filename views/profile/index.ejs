@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<div class="container-two profile">
+<div class="container-two">
   <% if (user) { %> <% if (user.avatar) { %>
   <div class="photo-container">
     <img
@@ -12,7 +12,6 @@
   </div>
   <% } %>
   <h1><%= user.name %></h1>
-  <!-- <h2>Going to these shows:</h2> -->
 
   <div class="result-container">
     <% shows.forEach(function(s) { %> <% if(user._id.equals(s.creatorId )) { %>
