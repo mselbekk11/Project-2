@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
 
-<div class="container">
+<div class="container-two profile">
   <% if (user) { %> <% if (user.avatar) { %>
-  <img
-    src="<%= user.avatar %>"
-    alt="<%= user.name %>'s avatar"
-    referrerpolicy="no-referrer"
-  />
+  <div class="photo-container">
+    <img
+      src="<%= user.avatar %>"
+      alt="<%= user.name %>'s avatar"
+      class="profile-photo"
+      referrerpolicy="no-referrer"
+    />
+  </div>
   <% } %>
-  <p><%= user.name %></p>
-  <p><%= user.email %></p>
-  <h2>Going to these shows:</h2>
+  <h1><%= user.name %></h1>
+  <!-- <h2>Going to these shows:</h2> -->
 
   <div class="result-container">
     <% shows.forEach(function(s) { %> <% if(user._id.equals(s.creatorId )) { %>

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+// const User = require('./user')
 
 const showSchema = new Schema(
   {
@@ -21,6 +22,7 @@ const showSchema = new Schema(
     creatorId: {
       type: String,
     },
+    // users: [{ type: mongoose.SchemaTypes.ObjectId, ref: User }],
   },
   {
     timestamps: true,

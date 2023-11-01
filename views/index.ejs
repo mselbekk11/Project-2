@@ -1,6 +1,6 @@
 <%- include('./partials/header') %>
 
-<div class="container">
+<div class="container-one">
   <h2>Find a Show</h2>
   <form action="/shows" method="GET" class="search">
     <input
@@ -42,7 +42,7 @@
           name="showLocale"
           value="<%= e._embedded.venues[0].city.name %>"
         />
-        <button type="submit">Save</button>
+        <button class="add" type="submit">Save</button>
       </form>
     </div>
 
