@@ -49,7 +49,7 @@ nav a {
 
 .navbar {
   width: 100vw;
-  /* height: 7.5vh; */
+  height: 10vh;
   background: #000;
   color: #fff;
   padding: 0 20px;
@@ -72,9 +72,14 @@ nav a {
 .container-one {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding-top: 90px;
+  min-height: 90vh;
+  background-image: url('https://res.cloudinary.com/dtjasyr7k/image/upload/v1698876836/test-2_axvqn8.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   /* background-color: #000; */
 }
 
@@ -172,6 +177,13 @@ input:focus, textarea:focus, select:focus{
 
 .show:hover .delete {
   visibility: visible;
+}
+
+.flex-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
 }
 
 

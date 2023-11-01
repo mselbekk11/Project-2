@@ -19,7 +19,7 @@
       <div class="image-container">
         <img name="showImage" class="show-image" src="<%= e.images[0].url %>" />
       </div>
-      <div name="showName"><%= e.name %></div>
+      <div name="showName" class="flex-child"><%= e.name %></div>
       <div name="showDate"><%= e.dates.start.localDate %></div>
       <div name="showVenue"><%= e._embedded.venues[0].name %></div>
       <div name="showLocale"><%= e._embedded.venues[0].city.name %></div>
