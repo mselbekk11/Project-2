@@ -31,14 +31,13 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 0.8em;
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .navbar {
@@ -60,13 +59,13 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 
 /* Search */
 
-form {
+form.search {
   background-color: #fff;
   padding: 5px;
 }
@@ -79,6 +78,10 @@ form {
   grid-template-columns: auto 150px;
   margin-bottom: 100px;
   margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 6px 19px rgba(0, 0, 0, 0.6)  ; 
+	-webkit-box-shadow: 1px 6px 19px rgba(0, 0, 0, 0.6)  ; 
+	-moz-box-shadow: 1px 6px 19px rgba(0, 0, 0, 0.6)  ; 
 }
 /* 
 input:focus, textarea:focus, select:focus{
@@ -90,13 +93,17 @@ input:focus, textarea:focus, select:focus{
   background-color: #fff;
   border: none;
   outline: none;
+  font-size: 0.9em;
+  padding-left: 10px;
+
   /* border: 1px solid #ccc; */
 }
 
 .search button {
-  background-color: #156FD8;
+  background-color: #EB564B;
   border: none;
   color: #fff;
+  border-radius: 5px;
 }
 
 
@@ -110,13 +117,17 @@ input:focus, textarea:focus, select:focus{
   flex-direction: row;
   /* align-items: flex-start; */
   justify-content: space-between;
-  background-color: #fff;
-  color: #4e4e4e;
-  margin-bottom: 20px;
+  background-color: #222222;
+  color: #fff;
+  margin-bottom: 10px;
   align-items: center;
   padding: 10px 20px;
   font-size: 0.9em;
+  border: 1px solid #31363C;
+  border-radius: 5px;
 }
+
+
 
 .image-container {
   width: 70px;
@@ -133,10 +144,11 @@ input:focus, textarea:focus, select:focus{
 }
 
 .show button {
-  background-color: #156FD8;
+  background-color: #EB564B;
   border: none;
   color: #fff;
   padding: 10px 30px;
+  border-radius: 5px;
 }
 
 button.delete {

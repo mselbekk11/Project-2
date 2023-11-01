@@ -1,4 +1,5 @@
 const Show = require('../models/show')
+const User = require('../models/user')
 
 module.exports = {
   index,
@@ -24,7 +25,12 @@ async function index(req, res) {
 async function create(req, res) {
   // console.log(req.body)
   try {
-    await Show.create(req.body)
+    const user = await User.findById(req.user._id)
+    console.log(user)
+    const show = await Show.create(req.body)
+    console.log(show)
+    user.shows.push(show)
+    user.save()
   } catch (err) {
     console.log(err)
   }

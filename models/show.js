@@ -15,6 +15,12 @@ const showSchema = new Schema(
     showVenue: {
       type: String,
     },
+    showLocale: {
+      type: String,
+    },
+    creatorId: {
+      type: String,
+    },
   },
   {
     timestamps: true,

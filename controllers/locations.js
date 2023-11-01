@@ -3,5 +3,5 @@ module.exports = {
 }
 
 function index(req, res) {
-  res.render('buddies/index', { title: '' })
+  res.render('locations/index', { title: '' })
 }

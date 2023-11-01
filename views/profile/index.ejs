@@ -13,7 +13,7 @@
   <h2>Going to these shows:</h2>
 
   <div class="result-container">
-    <% shows.forEach(function(s) { %>
+    <% shows.forEach(function(s) { %> <% if(user._id.equals(s.creatorId )) { %>
     <div class="show">
       <div class="image-container">
         <img name="showImage" class="show-image" src="<%= s.showImage %>" />
@@ -21,11 +21,12 @@
       <div name="showName"><%= s.showName %></div>
       <div name="showDate"><%= s.showDate.toLocaleDateString() %></div>
       <div name="showVenue"><%= s.showVenue %></div>
+      <div name="showVenue"><%= s.showLocale %></div>
       <form action="profile/shows/<%= s._id %>?_method=DELETE" method="POST">
         <button class="delete" type="submit">Delete</button>
       </form>
     </div>
-    <% }) %>
+    <% } %> <% }) %>
   </div>
 
   <% } else { %>
