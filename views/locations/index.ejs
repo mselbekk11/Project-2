@@ -1,6 +1,40 @@
 <%- include('../partials/header') %>
-<div class="container-two">
+<!-- <div class="container-two">
   <h2>Locations</h2>
+</div> -->
+
+<div class="container-two">
+  <% if (user) { %>
+
+  <div class="result-container">
+    <% shows.forEach(function(s) { %> <% if(user._id.equals(s.creatorId )) { %>
+    <div class="show">
+      <div class="image-container">
+        <img name="showImage" class="show-image" src="<%= s.showImage %>" />
+      </div>
+      <div name="showName"><%= s.showName %></div>
+      <div name="showDate"><%= s.showDate.toLocaleDateString() %></div>
+      <div name="showVenue"><%= s.showVenue %></div>
+      <div name="showVenue"><%= s.showLocale %></div>
+      <form action="profile/shows/<%= s._id %>?_method=DELETE" method="POST">
+        <button class="delete" type="submit">Delete</button>
+      </form>
+    </div>
+    <% if (user.avatar) { %>
+    <div class="photo-container-two">
+      <img
+        src="<%= user.avatar %>"
+        alt="<%= user.name %>'s avatar"
+        class="profile-photo-two"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <% } %> <% } %> <% }) %>
+  </div>
+
+  <% } else { %>
+  <h2>Please login</h2>
+  <% } %>
 </div>
 
 <%- include('../partials/footer') %>

@@ -1,7 +1,18 @@
+const Show = require('../models/show')
+const User = require('../models/user')
+
 module.exports = {
   index,
 }
 
-function index(req, res) {
-  res.render('locations/index', { title: '' })
+async function index(req, res) {
+  const shows = await Show.find({})
+  // console.log(shows)
+  res.render('locations/index', { shows })
 }
+
+// async function index(req, res) {
+//   const shows = await Show.find({})
+//   // console.log(shows)
+//   res.render('profile/index', { shows })
+// }
