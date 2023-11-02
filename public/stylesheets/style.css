@@ -163,6 +163,26 @@ input:focus, textarea:focus, select:focus{
   border-radius: 5px;
 }
 
+.avatar {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  background-color: #323232;
+  color: #fff;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border: 1px solid #31363C;
+  border-radius: 5px;
+}
+
+.avatar-pic {
+  width: 60px;
+  height: 60px;
+}
+
 .show .add {
   visibility: hidden;
 }
@@ -239,11 +259,20 @@ img.profile-photo {
   margin-left: 25px;
 }
 
+.photo-container-three {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background-color: #181818;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
 img.profile-photo-two {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 4px solid #fff;
 }
 
 .container-two h1 {

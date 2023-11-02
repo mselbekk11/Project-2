@@ -20,16 +20,35 @@
         <button class="delete" type="submit">Delete</button>
       </form>
     </div>
-    <% if (user.avatar) { %>
-    <div class="photo-container-two">
-      <img
-        src="<%= user.avatar %>"
-        alt="<%= user.name %>'s avatar"
-        class="profile-photo-two"
-        referrerpolicy="no-referrer"
-      />
+
+    <div class="avatar">
+      <% if (user.avatar) { %>
+      <div class="photo-container-three">
+        <img
+          src="<%= user.avatar %>"
+          alt="<%= user.name %>'s avatar"
+          class="profile-photo-two"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <div class="photo-container-three">
+        <img
+          src="https://res.cloudinary.com/dtjasyr7k/image/upload/v1698886414/avatar_hypgj8.png"
+          alt="avatar"
+          class="avatar-pic"
+        />
+      </div>
+      <div class="photo-container-three">
+        <img
+          src="https://res.cloudinary.com/dtjasyr7k/image/upload/v1698886833/avatarr_ffu0xv.png"
+          alt="avatar"
+          class="avatar-pic"
+        />
+      </div>
+      <% } %>
     </div>
-    <% } %> <% } %> <% }) %>
+
+    <% } %> <% }) %>
   </div>
 
   <% } else { %>
