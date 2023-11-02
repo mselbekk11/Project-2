@@ -95,7 +95,6 @@ I will be using the Ticket Master API, which you can see is getting pinged in th
 - [x] Ability to add shows to profile
 - [x] Ability to remove shows from profile
 - [x] Authorization to add / delete a show only when logged in
-- [x] Make sure it is fully responsive
 
 ### Stretch Goals
 
@@ -106,3 +105,4 @@ I will be using the Ticket Master API, which you can see is getting pinged in th
 - [ ] When loading the homepage initialy it asks to view your location, and when confirmed it will automatically load shows near you
 
 - [ ] Genre picking instead of just location
+- [ ] Make sure it is fully responsive
