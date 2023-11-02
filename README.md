@@ -4,7 +4,7 @@ ShowBuddy is an app for people who want to go to a concert, show or gig, but hav
 
 ## Screenshots
 
-![Show Buddy Homepage](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698945554/1_gvjxbu.png)
+![Show Buddy Homepage](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698945689/Screenshot_2023-11-02_at_10.21.09_qjqt9w.png)
 
 ![Show Buddy results](https://res.cloudinary.com/dtjasyr7k/image/upload/v1698944694/2_kjvnfj.png)
 
