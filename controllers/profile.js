@@ -18,12 +18,10 @@ async function deleteShow(req, res) {
 
 async function index(req, res) {
   const shows = await Show.find({})
-  // console.log(shows)
   res.render('profile/index', { shows })
 }
 
 async function create(req, res) {
-  // console.log(req.body)
   try {
     const user = await User.findById(req.user._id)
     console.log(user)
@@ -36,13 +34,3 @@ async function create(req, res) {
   }
   res.redirect('/profile')
 }
-
-// async function create(req, res) {
-//   console.log(req.body)
-//   const shows = await Show.create(req.body)
-//   try {
-//   } catch (err) {
-//     console.log(err)
-//   }
-//   res.redirect('/profile')
-// }

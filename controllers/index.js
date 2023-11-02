@@ -30,13 +30,3 @@ function create(req, res) {
     })
     .catch((err) => console.log(err))
 }
-
-// module.exports = {
-//   index
-// }
-
-// function index(req, res) {
-//   res.render("index", {
-//     title: "Homepage"
-//   });
-// }
