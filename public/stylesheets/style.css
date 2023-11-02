@@ -141,6 +141,18 @@ input:focus, textarea:focus, select:focus{
   border-radius: 5px;
 }
 
+.search button:hover {
+  background-color: #9b3831;
+  transition: 0.3s;
+}
+
+.show button:hover {
+  background-color: #9b3831;
+  transition: 0.3s;
+}
+
+
+
 
 
 .result-container {
@@ -231,7 +243,11 @@ input:focus, textarea:focus, select:focus{
 }
 
 button.delete {
-  background-color: red;
+  background-color: #9b3831;
+}
+
+button.delete:hover {
+  background-color: #ba2b21;
 }
 
 .photo-container {
